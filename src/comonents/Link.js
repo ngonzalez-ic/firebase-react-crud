@@ -4,6 +4,7 @@ import { db } from '../firebase';
 import { toast } from 'react-toastify';
 
 const Link =()=>{
+    console.log('github-pages');
     const [link, setLinks]= useState([])
     const [currentID, setCurrentID]=useState('')
     const addTask=async(linkObjet)=>{
@@ -25,6 +26,7 @@ const Link =()=>{
           }
         };
     const getLinks = async()=>{
+        // eslint-disable-next-line no-unused-vars
         const querySnapshot=  db.collection('links').onSnapshot((querySnapshot)=>{
             const docs =[]
             querySnapshot.forEach( doc=>{
